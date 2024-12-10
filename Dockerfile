@@ -1,4 +1,4 @@
-# https://testdriven.io/blog/docker-best-practices/#use-multi-stage-builds
+
 # initialize new build stage
 FROM python:3.13.1-slim-bookworm AS compiler
 
