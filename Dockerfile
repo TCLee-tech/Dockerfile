@@ -87,4 +87,4 @@ ENTRYPOINT ["/.venv/bin/streamlit", "run", "project.py", "--server.port=8501"]
 # -d runs container in detached mode (in background)
 # -p 8501:8501 is to map port 8501 on host to port 8501 in container
 # Or:
-# streamlit run project.py
+# streamlit run app.py
