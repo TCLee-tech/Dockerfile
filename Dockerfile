@@ -7,7 +7,7 @@ ENV PYTHONWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
 # set working directory in container. / is  root of file system in container.
-WORKDIR /market_news
+WORKDIR /
 
 # To remove Jupyter Notebook files, uncheck block below
 # no significant size reduction but may remove CVE risks
@@ -53,7 +53,7 @@ RUN groupadd --gid=${USER_GID} --system ${USERNAME} \
     --uid=${USER_UID} --gid=${USER_GID} --system ${USERNAME}
 
 # set the working directory
-WORKDIR /market_news
+WORKDIR /
 
 # activate virtual environment in final stage
 ENV PATH="/.venv/bin:$PATH"
@@ -64,7 +64,7 @@ COPY --from=compiler /.venv /.venv
 # copy application code
 COPY . .
 
-# chown - change ownership of /market_news directory to new non-root user
+# chown - change ownership of / directory to new non-root user
 # set directory's permission to read and execute only (555), ensure the non-root user cannot modify the application's code
 RUN chown -R ${USER_UID}:${USER_GID} /market_news \
     && chmod -R 555 /market_news
