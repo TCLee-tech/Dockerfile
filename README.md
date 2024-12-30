@@ -1,6 +1,7 @@
 # Dockerfile for python 3.13 on Debian/Ubuntu bookworm-slim
-*** for running Streamlit OpenAI FastAPI ***
-#### The Dockerfile is annotated for easy reading. Comments on best practices incorporated below:
+*▶️ for running Streamlit OpenAI FastAPI*   
+*▶️ please modify codes if you are using Dockerfile for other applications*
+#### The Dockerfile is annotated for easy reading. Highlights on best practices incorporated below:
 
 ## Features:
 - container for application serving end-users
